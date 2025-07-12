@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      font-family: italic, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #00FFFF;
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #DC143C;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: red;
+      color: black;
+    }
+
+    section {
+      padding: 20px;
+      display: none;
+    }
+
+    section:target {
+      display: block;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    input[type="email"]{
+      padding: 8px;
+      width: 250px;
+    }
+
+    input[type="submit"] {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>my project</h1>
+    <p>HTML and PYTHON PROJECT</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>This is a simple website created using HTML only.</p>
+    <p>Email validation project into the project section.</p>
+    <h2>FULL STACK DEVELOPER</h2>
+    <p>Frontend</p>
+    <ul>Basics</ul>
+    <ol>
+      
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVASCRIPTS</li>
+      </ol>
+    <img src="IMG-20250621-WA0009.jpg".jpg" alt="Saurabh Saini Photo" width="380px" style="border-radius: 10px;">
+    <video width="320" height="240" controls>
+  <source src="Masss theme.mp4" type="video/mp4">
+ 
+  Your browser does not support the video tag.
+</video>
+  </section>
+
+  
+  <section id="about">
+  <h2>About</h2>
+  <p>My name is Saurabh Saini. I am learning web development and building small projects.</p>
+    <img src="IMG_20220206_122553.jpg" alt="Saurabh Saini Photo" width="100px" style="border-radius: 10px;">
+    
+
+  <h3>My Resume (PDF)</h3>
+
+  
+  <iframe src="SaurabhSaini_InternshalaResume.pdf" width="100%" height="200px"></iframe>
+
+  
+  <p><a href="SaurabhSaini_InternshalaResume.pdf" download>Download PDF</a></p>
+</section>
+   
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3>Email Validation Project</h3>
+    <form>
+      <label for="email">Enter your email:</label><br><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <input type="submit" value="Validate Email">
+    </form>
+    <h3> Email validition project used python programming </h3>
+    <pre>
+      <i>def is_valid_email(email):
+    # Rule 1: Must contain exactly one '@'
+    if email.count('@') != 1:
+        return False
+
+    # Rule 2: Split into parts before and after '@'
+    at_index = email.index('@')
+    username = email[:at_index]
+    domain = email[at_index + 1:]
+
+    # Rule 3: Must not start or end with '@' or '.'
+    if email[0] in ['@', '.'] or email[-1] in ['@', '.']:
+        return False
+
+    # Rule 4: There must be at least one '.' in the domain part
+    if '.' not in domain:
+        return False
+    dot_index = email.rindex('.')
+    if at_index > dot_index:
+        return False
+    if len(username) == 0 or len(domain) == 0:
+        return False
+      return True
+if __name__ == "__main__":
+    email = input("Enter your email: ")
+
+    if is_valid_email(email):
+        print("✅ Valid Email!")
+    else:
+        print("❌ Invalid Email!")</i>
+    </pre>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: sainisaurabh794@example.com</p>
+    <p>phone: 9351371752</p>
+    <p>ADD. Bayana road bhusawar,321406</p>
+    
+  </section>
+   
+
+  <footer>
+    <p>© 2025 Saurabh Saini/sainisaurabh794@gmail.com | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
